@@ -292,6 +292,7 @@ header .container {
 /* productos */
 .products {
   padding: 6rem 0;
+  background-color: var(--ghost-white);
 }
 .products h2 {
   text-align: center;
