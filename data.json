@@ -1,0 +1,122 @@
+[
+  {
+    "name": "Sillón",
+    "category": "Sillas",
+    "price": "8.000",
+    "imgSrc": "IMG/armchair.png"
+  },
+  {
+    "name": "Cama 2 plazas",
+    "category": "Camas",
+    "price": "12.000",
+    "imgSrc": "IMG/bed.png"
+  },
+  {
+    "name": "Banco Madera",
+    "category": "Bancos",
+    "price": "3.000",
+    "imgSrc": "IMG/bench.png"
+  },
+  {
+    "name": "Marinera",
+    "category": "Camas",
+    "price": "10.000",
+    "imgSrc": "IMG/bunk-bed.png"
+  },
+  {
+    "name": "Gavin Belson",
+    "category": "Gabinetes",
+    "price": "11.000",
+    "imgSrc": "IMG/cabinet.png"
+  },
+  {
+    "name": "Mesa Póker",
+    "category": "Mesas",
+    "price": "20.000",
+    "imgSrc": "IMG/card-table.png"
+  },
+  {
+    "name": "Almohadon",
+    "category": "Almohadones",
+    "price": "2.500",
+    "imgSrc": "IMG/cushion.png"
+  },
+  {
+    "name": "Escritorio",
+    "category": "Escritorios",
+    "price": "15.000",
+    "imgSrc": "IMG/desk.png"
+  },
+  {
+    "name": "Cómoda 3 cajones",
+    "category": "Cómodas",
+    "price": "7.000",
+    "imgSrc": "IMG/drawer.png"
+  },
+  {
+    "name": "Silla de oficina",
+    "category": "Sillas",
+    "price": "10.000",
+    "imgSrc": "IMG/office-chair.png"
+  },
+  {
+    "name": "Reposeras gemelas",
+    "category": "Sillas",
+    "price": "12.000",
+    "imgSrc": "IMG/scissors-chair.png"
+  },
+  {
+    "name": "Súper Sofá",
+    "category": "Sofás",
+    "price": "40.000",
+    "imgSrc": "IMG/sleeper-sofa.png"
+  },
+  {
+    "name": "Cama una plaza",
+    "category": "Camas",
+    "price": "8.000",
+    "imgSrc": "IMG/sleigh-bed.png"
+  },
+  {
+    "name": "Sofá Cama",
+    "category": "Sofás",
+    "price": "18.000",
+    "imgSrc": "IMG/sofa-bed.png"
+  },
+  {
+    "name": "Sillón Blanco",
+    "category": "Sillas",
+    "price": "9.000",
+    "imgSrc": "IMG/white-armchair.png"
+  },
+  {
+    "name": "Sofá blanco",
+    "category": "Sofás",
+    "price": "25.000",
+    "imgSrc": "IMG/white-sofa.png"
+  },
+  {
+    "name": "Sillón Azul",
+    "category": "Sillas",
+    "price": "10.000",
+    "imgSrc": "IMG/wing-chair.png"
+  },
+  {
+    "name": "Silla Mecedora",
+    "category": "Sillas",
+    "price": "12.000",
+    "imgSrc": "IMG/wooden-armchair.png"
+  },
+  {
+    "name": "Mesa y sillas madera",
+    "category": "Mesas",
+    "price": "30.000",
+    "imgSrc": "IMG/wooden-dining-table.png"
+  },
+  {
+    "name": "Mesa madera",
+    "category": "Mesas",
+    "price": "20.000",
+    "imgSrc": "IMG/wooden-table.png"
+  }
+]

@@ -1,0 +1,72 @@
+/* Media Queries para que sea responsive*/
+
+@media screen and (min-width: 480px) {
+  /* header */
+  .btns button {
+    display: inline-block;
+  }
+  .btns button:first-child {
+    margin-right: 0.4rem;
+  }
+}
+
+@media screen and (min-width: 680px) {
+  .navbar {
+    padding: 1.5rem 3rem !important;
+  }
+  .cart-container {
+    width: 480px;
+    left: auto;
+    right: 3rem;
+  }
+  .product-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .navbar {
+    padding: 1.5rem 6rem !important;
+  }
+  .cart-container {
+    right: 6rem;
+  }
+  .banner {
+    padding-top: 0;
+    display: grid;
+    grid-template-columns: 55% 45%;
+    align-content: center;
+  }
+  .banner-content {
+    text-align: left;
+  }
+  .product-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .footer-banner {
+    text-align: left;
+  }
+  .footer-banner .text {
+    width: 60%;
+  }
+  .footer-banner .btn {
+    margin-left: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .navbar {
+    padding: 1.5rem 14rem !important;
+  }
+  .cart-container {
+    right: 14rem;
+  }
+  .banner-content h1 {
+    font-size: 3.5rem;
+  }
+  .product-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

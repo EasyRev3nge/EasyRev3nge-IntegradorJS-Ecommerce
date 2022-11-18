@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Arcane Muebles</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- agregamos el font awesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+    <!-- agregamos el link a nuestra hoja de estilos -->
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <!-- header  -->
+    <header>
+      <div class="container">
+        <!-- navbar -->
+        <nav class="navbar">
+          <a href="index.html" class="navbar-logo">Arcane</a>
+          <button type="button" class="navbar-toggler">
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="navbar-collapse">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Galeria</a></li>
+              <li><a href="#">Novedades</a></li>
+              <li><a href="#">Contacto</a></li>
+            </ul>
+          </div>
+
+          <div class="cart">
+            <button type="button" id="cart-btn">
+              <i class="fas fa-shopping-cart"></i>
+              <span id="cart-count-info"></span>
+            </button>
+
+            <div class="cart-container">
+              <div class="cart-list">
+                <!-- <div class = "cart-item">
+                  <img src = "IMG/armchair.png" alt = "product image">
+                  <div class = "cart-item-info">
+                    <h3 class = "cart-item-name">Sillón</h3>
+                    <span class = "cart-item-category">Sillas</span>
+                    <span class = "cart-item-price">$8.000</span>
+                  </div>
+                  <button type = "button" class = "cart-item-del-btn">
+                    <i class = "fas fa-times"></i>
+                  </button>
+                </div> -->
+              </div>
+
+              <div class="cart-total">
+                <h3>Total: $</h3>
+                <span id="cart-total-value"></span>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <!-- fin del navbar -->
+
+        <!-- banner -->
+        <div class="banner">
+          <div class="banner-content">
+            <h1>Los mejores muebles para tu hogar</h1>
+            <p class="text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
+              eveniet, quis nisi recusandae assumenda ea sequi obcaecati
+              accusantium in provident dolore debitis autem neque vel commodi
+              atque voluptates incidunt aliquam delectus veritatis?
+              Exercitationem, fugit sed!
+            </p>
+            <div class="btns">
+              <button type="button" class="btn">ver más</button>
+              <button type="button" class="btn">más info</button>
+            </div>
+          </div>
+
+          <div class="banner-img">
+            <img src="IMG/banner-img.png" alt="furniture banner image" />
+          </div>
+        </div>
+        <!-- fin del banner  -->
+      </div>
+    </header>
+    <!-- fin del header -->
+
+    <!-- sección de productos  -->
+    <section class="products">
+      <div class="container">
+        <h2>Nuestros Productos</h2>
+        <div class="product-list">
+          <!-- <div class = "product-item">
+            <div class = "product-img">
+              <img src = "IMG/bed.png" alt = "product image">
+              <button type = "button" class = "add-to-cart-btn">
+                <i class = "fas fa-shopping-cart"></i>Add To Cart
+              </button>
+            </div>
+            <div class = "product-content">
+              <h3 class = "product-name">Cama 2 plazas</h3>
+              <span class = "product-category">Camas</span>
+              <p class = "product-price">$12.000</p>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </section>
+    <!-- fin de la sección de productos -->
+
+    <!-- footer -->
+    <footer>
+      <div class="footer-banner">
+        <div class="container">
+          <h2>Colección Ilimitada de muebles</h2>
+          <p class="text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores est
+            quod maxime nisi possimus corporis qui aliquid molestias sit iusto
+            itaque, cum delectus tempore, distinctio velit. Repellat reiciendis
+            suscipit quidem aliquid ipsam, nemo minus repudiandae quas eligendi
+            natus voluptate nostrum?
+          </p>
+          <button type="button" class="btn">ver más</button>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="social-icons">
+          <a href="#">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#">
+            <i class="fab fa-pinterest"></i>
+          </a>
+          <a href="#">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+    <!-- fin del footer -->
+
+    <script src="index.js"></script>
+  </body>
+</html>
