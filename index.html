@@ -14,7 +14,8 @@
     />
     <!-- agregamos el link a nuestra hoja de estilos -->
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
+    <link rel="stylesheet" href="mediaqueries2.css" />
+    <!-- <link rel="stylesheet" href="mediaqueries.css" /> -->
   </head>
   <body>
     <!-- header  -->
@@ -23,14 +24,17 @@
         <!-- navbar -->
         <nav class="navbar">
           <a href="index.html" class="navbar-logo">Arcane</a>
-          <button type="button" class="navbar-toggler">
+          <button
+            type="button"
+            class="menu-btn nav-toggle"
+            aria-label="open-menu"
+          >
             <i class="fas fa-bars"></i>
           </button>
-          <div class="navbar-collapse">
+          <div class="nav-menu" aria-label="closed-menu">
             <ul>
               <li><a href="#">Home</a></li>
-              <li><a href="#">Galeria</a></li>
-              <li><a href="#">Novedades</a></li>
+              <li><a href="#">Categorias</a></li>
               <li><a href="#">Contacto</a></li>
             </ul>
           </div>
@@ -60,6 +64,11 @@
                 <h3>Total: $</h3>
                 <span id="cart-total-value"></span>
               </div>
+            </div>
+            <div class="user-container">
+              <button type="button" id="user-btn">
+                <i class="fas fa-user"></i>
+              </button>
             </div>
           </div>
         </nav>

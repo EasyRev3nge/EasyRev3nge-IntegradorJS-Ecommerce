@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 :root {
-  --ghost-white: #f2e9e4;
+  --ghost-white: #e9ecef;
   --fire-bush: #deb100;
   --granite-gray: #626a6a;
   --baltic-sea: #33383c;
@@ -54,7 +54,83 @@ header .container {
   display: flex;
   flex-direction: column;
 }
+
+/* navbar */
 .navbar {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  width: 100%;
+  padding: 1.5rem 1rem !important;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1.5rem 0;
+  background: var(--ghost-white);
+  z-index: 999;
+}
+.navbar-logo {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--granite-gray);
+  justify-self: flex-start;
+}
+
+/* Menu Hamburguesa */
+.nav-menu {
+  width: 50%;
+}
+.nav-menu ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav-menu li {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  align-content: center;
+}
+
+.nav-menu li a {
+  font-size: 20px;
+  /* line-height: 6em; */
+
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.menu-btn {
+  justify-self: flex-end;
+  display: none;
+  border: none;
+  color: #fff;
+  background: var(--fire-bush);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  font-size: 1.5rem;
+  z-index: 999;
+}
+
+#user-btn {
+  border: none;
+  font-size: 1.5rem;
+  background: none;
+  color: var(--granite-gray);
+}
+/* .navbar {
   position: fixed;
   top: 0;
   left: 50%;
@@ -80,6 +156,7 @@ header .container {
 }
 .navbar-toggler {
   justify-self: center;
+  display: none;
   border: none;
   color: #fff;
   background: var(--fire-bush);
@@ -93,7 +170,13 @@ header .container {
   font-size: 1.5rem;
   position: relative;
 }
-.navbar-collapse {
+
+.nav-menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.nav-menu-collapse {
   position: absolute;
   top: 100%;
   left: 50%;
@@ -110,28 +193,32 @@ header .container {
   -moz-transition: var(--trans);
   -ms-transition: var(--trans);
   -o-transition: var(--trans);
-}
+} */
 /* clase relacionada con el js */
-.show-navbar {
+/* .show-navbar {
   height: 204px;
 }
-/*  */
-.navbar-collapse ul {
+
+.nav-menu-collapse ul {
   list-style-type: none;
 }
-.navbar-collapse li {
+.nav-menu-collapse li {
   margin: 0.7rem 0;
   letter-spacing: 2px;
   text-align: center;
 }
-.navbar-collapse a {
+.nav-menu-collapse a {
   font-size: 1.15rem;
   opacity: 0.7;
-}
+} */
 .cart {
   justify-self: flex-end;
+  width: 6.7rem;
+  display: flex;
   padding-right: 8px;
+  justify-content: space-between;
 }
+
 #cart-btn {
   border: none;
   font-size: 1.5rem;
@@ -243,12 +330,14 @@ header .container {
 /* banner */
 .banner {
   flex: 1;
-  padding-top: 6rem;
+  display: flex;
+  justify-content: center;
+  padding-top: 7rem;
 
-  text-align: center;
+  text-align: left;
 }
 .banner > div {
-  margin: 3rem 1rem;
+  margin: 1rem 1rem;
 }
 .banner .text {
   font-weight: 500;

@@ -1,0 +1,35 @@
+:root {
+  --ghost-white: #e9ecef;
+  --fire-bush: #deb100;
+  --granite-gray: #626a6a;
+  --baltic-sea: #33383c;
+  --trans: all 0.5s ease-in-out;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* TABLET */
+
+@media (max-width: 992px) {
+  body {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .navbar {
+    padding: 1.5rem 4rem !important;
+  }
+  .cart-container {
+    right: 14rem;
+  }
+  .banner-content h1 {
+    font-size: 3.5rem;
+  }
+  .product-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

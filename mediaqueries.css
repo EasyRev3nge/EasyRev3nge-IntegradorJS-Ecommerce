@@ -1,6 +1,6 @@
 /* Media Queries para que sea responsive*/
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 360px) {
   /* header */
   .btns button {
     display: inline-block;
@@ -8,12 +8,54 @@
   .btns button:first-child {
     margin-right: 0.4rem;
   }
+
+  .nav-menu {
+    /* display: block; */
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    /* z-index: 999; */
+    background: var(--baltic-sea);
+    padding: 15px;
+    top: 100px;
+    left: 0;
+
+    transform: translateX(200%);
+    transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
+  }
+
+  .show-navmenu {
+    pointer-events: auto;
+    transform: translate(0%);
+  }
+  /* menu hamburguesa */
+  .menu-btn {
+    display: block;
+  }
 }
 
 @media screen and (min-width: 680px) {
   .navbar {
     padding: 1.5rem 3rem !important;
   }
+  .nav-menu {
+    position: absolute;
+    display: block;
+    width: 50%;
+  }
+
+  .nav-menu ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .menu-btn {
+    position: relative;
+    overflow: hidden;
+    display: block;
+  }
+
   .cart-container {
     width: 480px;
     left: auto;

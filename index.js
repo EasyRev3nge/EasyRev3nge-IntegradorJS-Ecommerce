@@ -1,6 +1,8 @@
 // variables y constantes
 const cartContainer = document.querySelector('.cart-container');
 const productList = document.querySelector('.product-list');
+const navToggle = document.querySelector('.nav-toggle');
+const navMenu = document.querySelector('.nav-menu');
 const cartList = document.querySelector('.cart-list');
 const cartTotalValue = document.getElementById('cart-total-value');
 const cartCountInfo = document.getElementById('cart-count-info');
@@ -15,8 +17,18 @@ function eventListeners() {
     loadCart();
   });
   // toggle navbar cuando el toggle button es clickeado
-  document.querySelector('.navbar-toggler').addEventListener('click', () => {
-    document.querySelector('.navbar-collapse').classList.toggle('show-navbar');
+  // document.querySelector('.menu-btn').addEventListener('click', () => {
+  //   document.querySelector('.nav-menu').classList.toggle('show-navmenu');
+  // });
+
+  navToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('show-navmenu');
+
+    if (navMenu.classList.contains('.show-navmenu')) {
+      navToggle.setAttribute('aria-label', 'close-menu');
+    } else {
+      navToggle.setAttribute('aria-label', 'open-menu');
+    }
   });
 
   // mostrar/ocultar contenedor del carrito
