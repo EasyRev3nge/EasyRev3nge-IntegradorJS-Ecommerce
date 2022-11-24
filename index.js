@@ -7,6 +7,8 @@ const cartList = document.querySelector('.cart-list');
 const cartTotalValue = document.getElementById('cart-total-value');
 const cartCountInfo = document.getElementById('cart-count-info');
 let cartItemID = 1;
+const showSuccesModal = document.querySelector('.add-modal');
+const overlay = document.querySelector('.overlay');
 
 eventListeners();
 
@@ -29,11 +31,13 @@ function eventListeners() {
     } else {
       navToggle.setAttribute('aria-label', 'open-menu');
     }
+    overlay.classList.toggle('show-overlay');
   });
 
   // mostrar/ocultar contenedor del carrito
   document.getElementById('cart-btn').addEventListener('click', () => {
     cartContainer.classList.toggle('show-cart-container');
+    overlay.classList.toggle('show-overlay');
   });
 
   // agregar al carrito
@@ -49,6 +53,42 @@ function updateCartInfo() {
   cartCountInfo.textContent = cartInfo.productCount;
   cartTotalValue.textContent = cartInfo.total;
 }
+
+//funciones para la interfaz del menú y el carrito de compras
+
+const closeOnClick = (e) => {
+  if (!e.target.classList.contains('nav-menu-item')) return;
+  navMenu.classList.remove('show-navmenu');
+  overlay.classList.remove('show-overlay');
+  navToggle.classList.remove('hidden');
+};
+console.log(e);
+
+const closeOnClickButton = (e) => {
+  if (!e.target.classList.contains('close')) return;
+  cartContainer.classList.remove('show-cart-container');
+  overlay.classList.remove('show-overlay');
+  navToggle.classList.remove('hidden');
+};
+
+const closeOnOverlayClick = () => {
+  navMenu.classList.remove('show-navmenu');
+  cartMenu.classList.remove('open-cart');
+  overlay.classList.remove('show-overlay');
+  navToggle.classList.remove('hidden');
+};
+
+const closeOnScroll = () => {
+  if (
+    !navMenu.classList.contains('show-navmenu') &&
+    !cartMenu.classList.contains('open-cart')
+  )
+    return;
+  navMenu.classList.remove('show-navmenu');
+  cartMenu.classList.remove('open-cart');
+  overlay.classList.remove('show-overlay');
+  barsMenu.classList.remove('hidden');
+};
 
 // cargamos los productos desde el archivo JSON
 function loadJSON() {

@@ -84,6 +84,7 @@ header .container {
 /* Menu Hamburguesa */
 .nav-menu {
   width: 50%;
+  z-index: 99;
 }
 .nav-menu ul {
   display: flex;
@@ -217,6 +218,7 @@ header .container {
   display: flex;
   padding-right: 8px;
   justify-content: space-between;
+  z-index: 98;
 }
 
 #cart-btn {
@@ -250,7 +252,7 @@ header .container {
   overflow-y: scroll;
   background: var(--ghost-white);
   width: 100%;
-  height: 600px;
+  height: 100vh;
   top: 100%;
   left: 0;
   right: 0;
@@ -260,6 +262,7 @@ header .container {
 .cart-container::-webkit-scrollbar {
   width: 8px;
 }
+
 .cart-container::-webkit-scrollbar-thumb {
   background: rgba(0, 0, 0, 0.1);
   border-radius: 15px;
@@ -328,24 +331,36 @@ header .container {
 }
 
 /* banner */
-.banner {
+/* .banner {
   flex: 1;
   display: flex;
   justify-content: center;
   padding-top: 7rem;
 
   text-align: left;
+} */
+
+.banner {
+  padding-top: 7rem;
+  display: grid;
+  grid-template-columns: 55% 45%;
+  align-content: center;
 }
 .banner > div {
-  margin: 1rem 1rem;
+  margin: 9rem 1rem;
 }
+
 .banner .text {
   font-weight: 500;
-  font-size: 1.15rem;
+  font-size: 1.4rem;
   opacity: 0.45;
 }
+
 .btns {
-  margin: 1.5rem 0;
+  display: inline-flex;
+  justify-content: flex-start;
+  margin: 1.5rem;
+  gap: 35px;
 }
 .btn {
   font-size: 1rem;
@@ -391,6 +406,7 @@ header .container {
   color: var(--granite-gray);
   margin-bottom: 3rem;
 }
+
 .product-item {
   margin: 1rem 0;
 }
@@ -531,4 +547,24 @@ footer > .container {
 }
 .social-icons a:hover {
   color: #fff;
+}
+
+/* OVERLAY */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  width: 100%;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(193, 194, 201, 0.37);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  display: none;
+}
+
+.show-overlay {
+  display: block;
 }

@@ -14,7 +14,7 @@
     />
     <!-- agregamos el link a nuestra hoja de estilos -->
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="mediaqueries2.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
     <!-- <link rel="stylesheet" href="mediaqueries.css" /> -->
   </head>
   <body>
@@ -33,14 +33,15 @@
           </button>
           <div class="nav-menu" aria-label="closed-menu">
             <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Categorias</a></li>
-              <li><a href="#">Contacto</a></li>
+              <li><a class="nav-menu-item" href="#">Home</a></li>
+              <li><a class="nav-menu-item" href="#">Categorias</a></li>
+              <li><a class="nav-menu-item" href="#">Contacto</a></li>
             </ul>
           </div>
+          <div class="overlay"></div>
 
           <div class="cart">
-            <button type="button" id="cart-btn">
+            <button class="close" type="button" id="cart-btn">
               <i class="fas fa-shopping-cart"></i>
               <span id="cart-count-info"></span>
             </button>
@@ -73,7 +74,6 @@
           </div>
         </nav>
         <!-- fin del navbar -->
-
         <!-- banner -->
         <div class="banner">
           <div class="banner-content">
