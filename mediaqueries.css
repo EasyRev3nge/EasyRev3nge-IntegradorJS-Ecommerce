@@ -102,6 +102,9 @@
     display: block;
   }
 
+  .banner {
+    padding-top: 7rem;
+  }
   .cart-container {
     width: 480px;
     left: auto;
@@ -122,7 +125,7 @@
     right: 6rem;
   }
   .banner {
-    padding-top: 0;
+    padding-top: 7rem;
     display: grid;
     grid-template-columns: 55% 45%;
     align-content: center;
@@ -153,6 +156,11 @@
   }
   .banner-content h1 {
     font-size: 3.5rem;
+  }
+
+  .add-to-cart-btn {
+    padding: 0.9rem 0.7rem;
+    width: 150px;
   }
   .product-list {
     grid-template-columns: repeat(4, 1fr);

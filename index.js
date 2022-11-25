@@ -7,7 +7,6 @@ const cartList = document.querySelector('.cart-list');
 const cartTotalValue = document.getElementById('cart-total-value');
 const cartCountInfo = document.getElementById('cart-count-info');
 let cartItemID = 1;
-const showSuccesModal = document.querySelector('.add-modal');
 const overlay = document.querySelector('.overlay');
 
 eventListeners();
@@ -15,29 +14,37 @@ eventListeners();
 // event listeners
 function eventListeners() {
   window.addEventListener('DOMContentLoaded', () => {
+    navMenu.addEventListener('click', closeOnClick);
+    overlay.addEventListener('click', closeOnOverlayClick);
+    window.addEventListener('scroll', closeOnScroll);
     loadJSON();
     loadCart();
   });
-  // toggle navbar cuando el toggle button es clickeado
-  // document.querySelector('.menu-btn').addEventListener('click', () => {
-  //   document.querySelector('.nav-menu').classList.toggle('show-navmenu');
-  // });
 
+  //Menu Hamburguesa
   navToggle.addEventListener('click', () => {
     navMenu.classList.toggle('show-navmenu');
-
-    if (navMenu.classList.contains('.show-navmenu')) {
-      navToggle.setAttribute('aria-label', 'close-menu');
+    if (navMenu.classList.contains('show-navmenu')) {
+      navToggle.setAttribute('aria-label', 'closed-menu');
     } else {
       navToggle.setAttribute('aria-label', 'open-menu');
     }
     overlay.classList.toggle('show-overlay');
+
+    if (cartContainer.classList.contains('show-cart-container')) {
+      cartContainer.classList.remove('show-cart-container');
+      overlay.classList.toggle('show-overlay');
+    }
   });
 
   // mostrar/ocultar contenedor del carrito
   document.getElementById('cart-btn').addEventListener('click', () => {
     cartContainer.classList.toggle('show-cart-container');
     overlay.classList.toggle('show-overlay');
+    if (navMenu.classList.contains('show-navmenu')) {
+      navMenu.classList.remove('show-navmenu');
+      overlay.classList.toggle('show-overlay');
+    }
   });
 
   // agregar al carrito
@@ -62,18 +69,10 @@ const closeOnClick = (e) => {
   overlay.classList.remove('show-overlay');
   navToggle.classList.remove('hidden');
 };
-console.log(e);
-
-const closeOnClickButton = (e) => {
-  if (!e.target.classList.contains('close')) return;
-  cartContainer.classList.remove('show-cart-container');
-  overlay.classList.remove('show-overlay');
-  navToggle.classList.remove('hidden');
-};
 
 const closeOnOverlayClick = () => {
   navMenu.classList.remove('show-navmenu');
-  cartMenu.classList.remove('open-cart');
+  cartContainer.classList.remove('show-cart-container');
   overlay.classList.remove('show-overlay');
   navToggle.classList.remove('hidden');
 };
@@ -81,13 +80,13 @@ const closeOnOverlayClick = () => {
 const closeOnScroll = () => {
   if (
     !navMenu.classList.contains('show-navmenu') &&
-    !cartMenu.classList.contains('open-cart')
+    !cartContainer.classList.contains('show-cart-container')
   )
     return;
   navMenu.classList.remove('show-navmenu');
-  cartMenu.classList.remove('open-cart');
+  cartContainer.classList.remove('show-cart-container');
   overlay.classList.remove('show-overlay');
-  barsMenu.classList.remove('hidden');
+  navToggle.classList.remove('hidden');
 };
 
 // cargamos los productos desde el archivo JSON
