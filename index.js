@@ -8,7 +8,7 @@ const cartTotalValue = document.getElementById('cart-total-value');
 const cartCountInfo = document.getElementById('cart-count-info');
 let cartItemID = 1;
 const overlay = document.querySelector('.overlay');
-
+const showSuccesModal = document.querySelector('.add-modal');
 eventListeners();
 
 // event listeners
@@ -89,6 +89,14 @@ const closeOnScroll = () => {
   navToggle.classList.remove('hidden');
 };
 
+const showSuccessModal = (msg) => {
+  showSuccesModal.classList.add('active-modal');
+  showSuccesModal.textContent = msg;
+  setTimeout(() => {
+    showSuccesModal.classList.remove('active-modal');
+  }, 1500);
+};
+
 // cargamos los productos desde el archivo JSON
 function loadJSON() {
   fetch('data.json')
@@ -121,7 +129,10 @@ function addProduct(e) {
   if (e.target.classList.contains('add-to-cart-btn')) {
     let product = e.target.parentElement.parentElement;
     getProductInfo(product);
+    showSuccessModal('El producto se ha agregado al carrito');
+    return;
   }
+  updateCartInfo();
 }
 
 // traemos la info del producto después de agregarlo al carrito
